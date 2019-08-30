@@ -11,8 +11,5 @@ export type InternshipData = {
   startup: string;
   stipend: StipendData;
   duration: number;
-  startDate: Date | null;
-  postedDate: Date;
-  applyDate: Date;
   content: Node;
 };
