@@ -1,0 +1,37 @@
+{
+  "name": "internshala-stipend-sort",
+  "version": "1.0.0",
+  "description": "adds the missing functionality of sorting by stipend on internshala",
+  "scripts": {
+    "lint": "eslint src/ --ext .ts",
+    "lint-fix": "eslint src/ --ext .ts --fix",
+    "build": "rm -rf dist/ && parcel build src/* && cp manifest.json dist/"
+  },
+  "keywords": [
+    "internshala",
+    "chrome",
+    "firefox",
+    "plugin",
+    "stipend",
+    "sort"
+  ],
+  "author": "arvind0598",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.6.2"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

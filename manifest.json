@@ -1,0 +1,17 @@
+{
+  "name": "Internshala Stipend Sort",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Allows sorting by stipend on Internshala",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://internshala.com/internships/*",
+        "http://internshala.com/internships/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
