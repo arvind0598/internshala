@@ -11,6 +11,7 @@ export const extractData = (html: Element): InternshipData => {
     startup: '',
     stipend: stipendData,
     duration: null,
+    durationType: null,
     content: html,
   };
   return internData;
