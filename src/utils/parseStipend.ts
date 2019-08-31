@@ -17,7 +17,7 @@ import {
  */
 /* eslint-disable no-param-reassign */
 const parseStipend = (stipendText: string): StipendData => {
-  console.log(stipendText);
+  // console.log(stipendText);
   if (stipendText === 'Unpaid') {
     return {
       amount: 0,
@@ -46,7 +46,7 @@ const parseStipend = (stipendText: string): StipendData => {
   };
 
   if (stipendText.includes('Incentives')) {
-    console.log('has incentives');
+    // console.log('has incentives');
     stipendData.hasIncentives = true;
     const plusLocation = stipendText.indexOf('+');
     stipendText = stipendText.slice(0, plusLocation);
@@ -54,24 +54,24 @@ const parseStipend = (stipendText: string): StipendData => {
 
   // we check this before checking range because Lump-Sum also contains a -
   if (stipendText.includes('Lump')) {
-    console.log('is a lump sum');
+    // console.log('is a lump sum');
     stipendData.type = 'LUMPSUM';
     stipendText = stipendText.slice(0, -9);
   }
 
   // is a range and not an absolute amount
   if (stipendText.includes('-')) {
-    console.log('is a range');
+    // console.log('is a range');
     const minusLocation = stipendText.indexOf('-');
     const maxStipend = stipendText.slice(minusLocation + 1);
     stipendData.maxAmount = parseInt(maxStipend, 10);
   }
 
   if (stipendText.includes('Month')) {
-    console.log('monthly');
+    // console.log('monthly');
     stipendData.type = 'MONTHLY';
   } else if (stipendText.includes('Week')) {
-    console.log('weekly');
+    // console.log('weekly');
     stipendData.type = 'WEEKLY';
   }
 

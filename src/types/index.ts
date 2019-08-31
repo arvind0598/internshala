@@ -1,3 +1,8 @@
+export type DurationData = {
+  time: number;
+  type: 'WEEK' | 'MONTH';
+};
+
 export type StipendData = {
   amount: number;
   maxAmount?: number;
@@ -10,7 +15,6 @@ export type InternshipData = {
   name?: string;
   startup?: string;
   stipend: StipendData;
-  duration: number;
-  durationType: 'WEEK' | 'MONTH';
+  duration: DurationData;
   content: Node;
 };
