@@ -7,8 +7,8 @@ export type StipendData = {
 };
 
 export type InternshipData = {
-  name: string;
-  startup: string;
+  name?: string;
+  startup?: string;
   stipend: StipendData;
   duration: number;
   durationType: 'WEEK' | 'MONTH';
