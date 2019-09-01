@@ -16,6 +16,6 @@ export const extractData = (html: Element): InternshipData => {
     duration: durationData,
     content: html,
   };
-  console.log(internData);
+  // console.log(internData);
   return internData;
 };

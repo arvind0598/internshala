@@ -3,8 +3,14 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"IAOg":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=function(e){var t=parseInt(e,10);return e.includes("Month")?{time:t,type:"MONTH"}:{time:t,type:"WEEK"}};exports.default=e;
 },{}],"s2T4":[function(require,module,exports) {
-"use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("./parseStipend")),r=e(require("./parseDuration"));exports.extractData=function(e){var n=e.querySelector(".stipend_container_table_cell").textContent.trim(),o=t.default(n),u=e.querySelectorAll("td")[1].textContent.trim(),a={stipend:o,duration:r.default(u),content:e};return console.log(a),a};
-},{"./parseStipend":"CMkq","./parseDuration":"IAOg"}],"hNRT":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("./utils"),r="#internship_list_container > .individual_internship",t=Array.from(document.querySelectorAll(r)),i=t.map(function(r){return e.extractData(r)});console.log(i);
-},{"./utils":"s2T4"}]},{},["hNRT"], null)
+"use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("./parseStipend")),r=e(require("./parseDuration"));exports.extractData=function(e){var n=e.querySelector(".stipend_container_table_cell").textContent.trim(),u=t.default(n),a=e.querySelectorAll("td")[1].textContent.trim();return{stipend:u,duration:r.default(a),content:e}};
+},{"./parseStipend":"CMkq","./parseDuration":"IAOg"}],"zUqs":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=function(){var e=document.createElement("div");return e.classList.add("arvind"),e.innerHTML="hello",e};exports.default=e;
+},{}],"7Oij":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=function(e,t){var n=document.createElement("label");n.classList.add("control-label"),n.innerText=e;var r=document.createElement("input");return r.setAttribute("type","checkbox"),r.addEventListener("change",t,!1),n.appendChild(r),n};exports.default=e;
+},{}],"JY4O":[function(require,module,exports) {
+"use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var r=e(require("./createFilterContainer"));exports.createFilterContainer=r.default;var t=e(require("./createSampleCheckbox"));exports.createCheckbox=t.default;
+},{"./createFilterContainer":"zUqs","./createSampleCheckbox":"7Oij"}],"hNRT":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("./utils"),r=require("./dom"),t=function(e){console.log(e)},n="#internship_list_container > .individual_internship",o=Array.from(document.querySelectorAll(n)),i=o.map(function(r){return e.extractData(r)});console.log(i);var a="#form-container",c=document.querySelector(a),l=r.createFilterContainer(),u=r.createCheckbox("sample",t);l.appendChild(u),c.prepend(l);
+},{"./utils":"s2T4","./dom":"JY4O"}]},{},["hNRT"], null)
 //# sourceMappingURL=/content.js.map

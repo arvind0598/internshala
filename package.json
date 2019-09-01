@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint src/ --ext .ts",
     "lint-fix": "eslint src/ --ext .ts --fix",
-    "build": "rm -rf dist/ && parcel build src/* && cp manifest.json dist/",
+    "build": "rm -rf dist/ && parcel build src/* src/styles/* && cp manifest.json dist/",
     "watch": "NODE_ENV=production parcel watch ./src/**/*"
   },
   "keywords": [
@@ -28,7 +28,8 @@
     "typescript": "^3.6.2"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.0.2"
+    "cz-conventional-changelog": "^3.0.2",
+    "sass": "^1.22.10"
   },
   "config": {
     "commitizen": {
