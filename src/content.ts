@@ -1,6 +1,6 @@
 import { InternshipData } from './types';
 import { extractData } from './utils';
-import { createFilterContainer, createCheckbox } from './dom';
+import { createFilterContainer, createRadioButton } from './dom';
 
 const sampleEventListener = (event: Event): void => {
   console.log(event);
@@ -14,8 +14,11 @@ console.log(internshipsArray);
 
 const formContainerPath = '#form-container';
 const formContainer = document.querySelector(formContainerPath);
-
 const sampleDiv = createFilterContainer();
-const sampleCheckbox = createCheckbox('sample', sampleEventListener);
-sampleDiv.appendChild(sampleCheckbox);
+
+const stipendSortButtonDiv = createRadioButton('Sort By Stipend', 'stipend-sort', 'stipend');
+sampleDiv.appendChild(stipendSortButtonDiv);
+const durationSortButtonDiv = createRadioButton('Sort By Duration', 'duration-sort', 'duration');
+sampleDiv.appendChild(durationSortButtonDiv);
+
 formContainer.prepend(sampleDiv);
